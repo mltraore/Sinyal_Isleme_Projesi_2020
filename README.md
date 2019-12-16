@@ -1,6 +1,6 @@
  **Kişisel Bilgileri** <br/>
 
-Öğrenci Ad-Soyad : Mohamed TRAORE<br/>       
+Öğrenci Ad-Soyad : Mohamed TRAORE<br/>
 Öğrenci   Numara : 030117024  <br/>
 Ders Adı         : Sinyal İşleme<br/>
 Proje            : MATLAB ile sentezleme<br/>
@@ -13,12 +13,12 @@ Proje            : MATLAB ile sentezleme<br/>
   **CEVAPLAR** <br/> 
 1. Oluşturulan müziğin .png dosyası <br/>
 
-   ![nota](/uploads/85ae517f20d28ee1a8801ac7a5251c26/nota.png)
+   ![](images/nota.png) <br/>
 
    Bu müzik 16 ölçülüklü olmak üzere 229 nota ve restten  oluşmaktadır. <br/>
    1.Ölçülük (9 tane nota ve 2 tane restten oluşmaktadır)<br/>
 
-   ![olculuk](/uploads/d35f81d78e38a77cae3ec5d43cb5d5ab/olculuk.png) <br/>
+   ![](images/olculuk.png) <br/>
 
   
 
@@ -35,7 +35,9 @@ Proje            : MATLAB ile sentezleme<br/>
           - t : notanın çalma zamanı (başlangıç , bitiş zamanı ve örnekleme frekansı ile bulunur)<br/>
      dolayısıyla lazım olan sütunlar bunlardır : <br/>
           4.Sütun: her bir notanın middi pitch değerini vermektedir ve bu değeri frekansa çevirilerek notanun freakansı bulunur.<br/>
-                  <pre> formül :  f = 440*2^((pitch - 69)/12)  Hz </pre> <br/>
+                    \begin{equation}
+                  <pre> formül : f = 440*2^((pitch - 69)/12)  Hz </pre> <br/>
+                    \end{equation}
           5.Sütun: Saniye cinsinden her notanın başlangıç zamanını vermektedir.<br/>
           6.Sütun: Saniye cinsinden her natanın ne kadar zaman sürdüğünü vermektedir. Bu değeri kullanarak bitiş zamanı bulunur.<br/>
                    bitiş zaman = başlangıç + süre <br/>
@@ -43,7 +45,19 @@ Proje            : MATLAB ile sentezleme<br/>
      Parse edilmiş Müzik örneği                                                   <br/>
      1.Ölçülük parse verileri(Sentezleme için lazım olan sütunlar belirlenmiştir) <br/>
     
-     ![parse](/uploads/e91bba8d4ed0d75dcecec68cd30b7d0b/parse.png)
+     ![](images/parse.png)
      <br/>
 **2. Hafta Hedefleri**
+
+-sentez.m scripti.<br/>
+-Exponential ve ADSR zarfların kullanılması. <br/>
+-Harmonik eklenmesi.<br/>
+-MATLAB'ın reverberation fonksiyonunu kullanarak yankı eklenmesi.<br/>
+-Program sonunda sinyal ve reverb eklenen olan sinyalin çizilmesi. <br/>
+-Program sonunda reverb eklenen sinyalin çaldırılması. <br/>
+-16. Ölçülükteki notaların harmonik eklenmeden eklenmiş ve reverb eklenmiş versiyonlarının grafikleri çıkartıp açıklamalara eklenmesi. <br/>
+
+**CEVAPLAR**
+
+
 
