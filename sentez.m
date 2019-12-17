@@ -35,9 +35,9 @@ for i  = 1:length(parse)
   signal  = horzcat(signal,nota);                                           %nota , sinyal dizisinin sonuna eklenir
   time    = horzcat(time,tt);                                               %nota süresi , time dizisinin sonuna eklenir
 
-  plot(time,signal);
-  if signal ~= 0
-  soundsc(signal,fs);
+ % plot(time,signal);
+ % if signal ~= 0
+ % soundsc(signal,fs);
   end
 end
  

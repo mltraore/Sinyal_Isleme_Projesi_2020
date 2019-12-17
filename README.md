@@ -13,13 +13,13 @@ Proje            : MATLAB ile sentezleme<br/>
   <h1>CEVAPLAR</h1> <br/> 
 <h2>1. Oluşturulan müziğin .png dosyası</h2> <br/>
 
-  ![Nota](/uploads/7d018d6da7251798f2e0e3270e47b7d4/Nota.png)
+  ![Nota](https://user-images.githubusercontent.com/53661737/70986265-a01f9e80-20ce-11ea-994b-b159533a36b8.png)
 
   <br/>
    Bu müzik 16 ölçülüklü olmak üzere 229 nota ve restten  oluşmaktadır. <br/>
    1.Ölçülük (9 tane nota ve 2 tane restten oluşmaktadır)<br/>
 
-  ![Olculuk](/uploads/177f120e78a1c97d85d1b027b2601f09/Olculuk.jpg)
+  ![Olculuk](https://user-images.githubusercontent.com/53661737/70986316-b75e8c00-20ce-11ea-9196-bcb84935e892.png)
 
   <br/>
 
@@ -46,7 +46,8 @@ Proje            : MATLAB ile sentezleme<br/>
      Parse edilmiş Müzik örneği                                                   <br/>
      1.Ölçülük parse verileri(Sentezleme için lazım olan sütunlar belirlenmiştir) <br/>
     
-     ![Parse](/uploads/028cb7a46af5a5bd84c7618efd32ec18/Parse.png)
+     
+    ![Parse](https://user-images.githubusercontent.com/53661737/70986358-cb09f280-20ce-11ea-9c28-54f0bcba0008.png)
 
      <br/>
 <h1>2. Hafta Hedefleri</h1>
