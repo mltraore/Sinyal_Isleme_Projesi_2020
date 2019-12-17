@@ -13,12 +13,12 @@ Proje            : MATLAB ile sentezleme<br/>
   <h1>CEVAPLAR</h1> <br/> 
 <h2>1. Oluşturulan müziğin .png dosyası</h2> <br/>
 
-   ![](images/nota.png) <br/>
+   ![](images/Nota.png) <br/>
 
    Bu müzik 16 ölçülüklü olmak üzere 229 nota ve restten  oluşmaktadır. <br/>
    1.Ölçülük (9 tane nota ve 2 tane restten oluşmaktadır)<br/>
 
-   ![](images/olculuk.png) <br/>
+   ![](images/Olculuk.png) <br/>
 
 <h2>2. .musicxml uzantılı dosyanın parse edilmesi</h2> <br/>
 
@@ -43,7 +43,7 @@ Proje            : MATLAB ile sentezleme<br/>
      Parse edilmiş Müzik örneği                                                   <br/>
      1.Ölçülük parse verileri(Sentezleme için lazım olan sütunlar belirlenmiştir) <br/>
     
-     ![](images/parse.png)
+     ![](images/Parse.png)
 
      <br/>
 <h1>2. Hafta Hedefleri</h1>
