@@ -13,12 +13,13 @@ Proje            : MATLAB ile sentezleme<br/>
   <h1>CEVAPLAR</h1> <br/> 
 <h2>1. Oluşturulan müziğin .png dosyası</h2> <br/>
 
-  ![Nota](/uploads/c1f790b187defe4cc686d74b8512c8bf/Nota.png)
+  ![Nota](/uploads/7d018d6da7251798f2e0e3270e47b7d4/Nota.png)
+
   <br/>
    Bu müzik 16 ölçülüklü olmak üzere 229 nota ve restten  oluşmaktadır. <br/>
    1.Ölçülük (9 tane nota ve 2 tane restten oluşmaktadır)<br/>
 
-  ![Olculuk](/uploads/0ffb3233d612a38f705378d146ed32f4/Olculuk.jpg)
+  ![Olculuk](/uploads/177f120e78a1c97d85d1b027b2601f09/Olculuk.jpg)
 
   <br/>
 
@@ -45,7 +46,7 @@ Proje            : MATLAB ile sentezleme<br/>
      Parse edilmiş Müzik örneği                                                   <br/>
      1.Ölçülük parse verileri(Sentezleme için lazım olan sütunlar belirlenmiştir) <br/>
     
-     ![Parse](/uploads/af06c114a68c849674152e7177a053b8/Parse.png)
+     ![Parse](/uploads/028cb7a46af5a5bd84c7618efd32ec18/Parse.png)
 
      <br/>
 <h1>2. Hafta Hedefleri</h1>
@@ -149,11 +150,11 @@ end
 
 <h2>5.1 Reverb eklenmemiş Sinyal grafiği (ADSR)</h2>
 
- ![signalNorReverb](/uploads/14d7106e4338e2766664adb781f50b70/signalNorReverb.jpg)
+ ![signalNorReverb](/uploads/7fb4ea03c6d7c347caad3445c39d26a8/signalNorReverb.jpg)
 
 <h2>5.2 Reverb eklenmiş Sinyal grafiği   (ADSR)</h2>
 
- ![signalReverb](/uploads/011f14d8377f89a2cae5c8510b865c71/signalReverb.jpg)
+ ![signalReverb](/uploads/c1357e0d0697d4e45d3dcb0091893424/signalReverb.jpg)
 
 <h3> Not : </h3>
 
