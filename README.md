@@ -13,12 +13,9 @@ Proje            : MATLAB ile sentezleme<br/>
   <h1>CEVAPLAR</h1> <br/> 
 <h2>1. Oluşturulan müziğin .png dosyası</h2> 
 
-<img src="images/Nota.png"> </img>   
-
-  
+<img src="images/Nota.png"> </img> 
    Bu müzik 16 ölçülüklü olmak üzere 229 nota ve restten  oluşmaktadır. <br/>
    1.Ölçülük (9 tane nota ve 2 tane restten oluşmaktadır)
-
 <img src="images/Olculuk.png"> </img>
 
 <h2>2. .musicxml uzantılı dosyanın parse edilmesi</h2> <br/>
@@ -86,7 +83,10 @@ for i  = 1:length(parse)
 
  if(zarf==1)
      %Exponential
-     nota = nota.*exp(-tt/parse(i,2));                                      %Exponential zarfı ilgili notaya uygulanır
+
+     ttt = 0:1/fs:dur-1/fs;
+     nota = nota.*exp(-ttt/parse(i,2));                                      %Exponential zarfı ilgili notaya uygulanır
+
  elseif(zarf==2) 
      %ADSR
      len  = length(nota);
@@ -114,6 +114,7 @@ end
 <h2>2.1 Notaya exponential zarfının uygulanması</h2>
 
 <pre>
+     ttt = 0:1/fs:dur-1/fs;
      nota = nota.*exp(-tt/parse(i,2));                                       %Exponential zarfı ilgili notaya uygulanır
 </pre>
 
@@ -145,15 +146,27 @@ end
      revSig   =  reverb(signal');                                               %Sonuç sinyale reverb eklenir
 </pre>
 
-<h2>5.1 Reverb eklenmemiş Sinyal grafiği (ADSR)</h2>
+<h2>5.1.1 Reverb eklenmemiş Sinyal grafiği (ADSR)</h2>
 
- ![signalNorReverb](/uploads/7fb4ea03c6d7c347caad3445c39d26a8/signalNorReverb.jpg)
+ <img src="images/signalNoReverb.png"> </img>
 
-<h2>5.2 Reverb eklenmiş Sinyal grafiği   (ADSR)</h2>
 
- ![signalReverb](/uploads/c1357e0d0697d4e45d3dcb0091893424/signalReverb.jpg)
+<h2>5.1.2 Reverb eklenmemiş Sinyal grafiği (EXPONENTIAL)</h2>
+
+ <img src="images/signalNoReverbex.png"> </img>
+
+
+<h2>5.2.1 Reverb eklenmiş Sinyal grafiği   (ADSR)</h2>
+
+ <img src="images/signalReverb.png"> </img>
+
+<h2>5.2.2 Reverb eklenmiş Sinyal grafiği   (EXPONENTIAL)</h2>
+
+ <img src="images/signalReverbex.png"> </img>
+
 
 <h3> Not : </h3>
+
 
 
 <h2>6 Reverb eklenen sinyalin çaldılırma </h2>
@@ -167,24 +180,22 @@ end
 
 <h3> Harmonik eklenmemiş (ADSR)</h3>
 
-   ![](images/harmoniksiz.jpg) 
+   <img src="images/harmoniksiz.png"> </img>
 
 <h3> Harmonik eklenmiş   (ADSR)</h3>
 
-   ![](images/harmonik_100.jpg)
+   <img src="images/harmonik_100.png"> </img>
 
 <h3> reverb eklenmiş (harmoniksiz)    (ADSR)</h3>
 
-   ![](images/reverbNoHarmonic.jpg)
+   <img src="images/reverbNoHarmonic.png"> </img>
 
 <h3> reverb eklenmiş (harmonik=100)    (ADSR)</h3>
 
-   ![](images/reverbHarmonic_100.jpg)
+   <img src="images/reverbHarmonic_100.png"> </img>
 
 <br/>
 
 <h3> Not : </h3>
-
-
 
 
