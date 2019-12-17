@@ -9,7 +9,7 @@ time   = [];
 tt     = [];
 
 
-for i  = 1:length(parse)
+for i  = 223:229 %length(parse)
  frek  = note(parse(i,4));                                                  %Pitch'ten frekans döndürülür
  start = parse(i,6);
  dur   = parse(i,7);
@@ -30,8 +30,9 @@ for i  = 1:length(parse)
      nota = nota.*env;                                                      %ADSR zarfı ilgili notaya uygulanır
                                                  
  elseif(zarf==2)   
-      %Exponential    
-      nota = nota.*exp(-tt/parse(i,2));                                     %Exponential zarfı ilgili notaya uygulanır     
+      %Exponential 
+      ttt = 0:1/fs:dur-1/fs;
+      nota = nota.*exp(-ttt/parse(i,2));                                     %Exponential zarfı ilgili notaya uygulanır     
  end
       signal  = horzcat(signal,nota);                                       %nota , sinyal dizisinin sonuna eklenir
       time    = horzcat(time,tt);                                           %nota süresi , time dizisinin sonuna eklenir
@@ -45,10 +46,8 @@ for i  = 1:length(parse)
  figure
  plot(time,revSig)                                                          %reverb eklenen sinyal çizilir
  legend('Signal','Reverb')
- title('Reverb eklenmemiş Sinyal');
- soundsc(revSig,fs);                                                        %reverb eklenen sinyal çalınır
- 
- 
+ title('Reverb eklenmiş Sinyal');
+ %soundsc(revSig,fs);                                                        %reverb eklenen sinyal çalınır
  
  
  

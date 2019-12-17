@@ -1,31 +1,31 @@
  <h1>Kişisel Bilgileri</h1> <br/>
-
+<p style="font-size:200%;">
 Öğrenci Ad-Soyad : Mohamed TRAORE<br/>
 Öğrenci   Numara : 030117024  <br/>
 Ders Adı         : Sinyal İşleme<br/>
 Proje            : MATLAB ile sentezleme<br/>
-
+</p>
 <h1>1. Hafta Hedefleri</h1> <br/>
--Müzik notasyon programı olan MuseCore ortamında oluşturulan müziğin MATLAB ortamında parse edilmesi.<br/>
+<p style="font-size:200%;">-Müzik notasyon programı olan MuseCore ortamında oluşturulan müziğin MATLAB ortamında parse edilmesi.<br/>
 -Müziği sentezlemek üzere note.m ve sentez.m MATLAB dosyalarının oluşturulması. <br/>
 -Parse edilmiş datanın incelenmesi ve müziğin sentezleyebilmesi içi lazım olan sütunların tespit edilmesi.<br/>
--Repoya .musicxml .mscz uzantılı müzik dosyaları ve .png uzantılı foto dosyasının eklenmesi.<br/>
+-Repoya .musicxml .mscz uzantılı müzik dosyaları ve .png uzantılı foto dosyasının eklenmesi. </p> <br/>
   <h1>CEVAPLAR</h1> <br/> 
 <h2>1. Oluşturulan müziğin .png dosyası</h2> 
 
 <img src="images/Nota.png"> </img> 
-   Bu müzik 16 ölçülüklü olmak üzere 229 nota ve restten  oluşmaktadır. <br/>
-   1.Ölçülük (9 tane nota ve 2 tane restten oluşmaktadır)
+  <p style="font-size:200%;"> Bu müzik 16 ölçülüklü olmak üzere 229 nota ve restten  oluşmaktadır. <br/>
+   1.Ölçülük (9 tane nota ve 2 tane restten oluşmaktadır) </p>
 <img src="images/Olculuk.png"> </img>
 
 <h2>2. .musicxml uzantılı dosyanın parse edilmesi</h2> <br/>
 
-     MusicXML Parser fonksiyonu kullanılarak oluşturulan müzik parse edilir.<br/>
-     mxml = parseMusicXML('nota.musicxml');<br/>
+    <p style="font-size:200%;"> MusicXML Parser fonksiyonu kullanılarak oluşturulan müzik parse edilir.<br/>
+     mxml = parseMusicXML('nota.musicxml');</p><br/> 
 
 <h2>3.   Müziği sentezleyebilmek için verinin lazım olan sütunları</h2> <br/>
  
-     notanın trigonometrik formülü : A*cos(2*pi*f*t)<br/>
+    <p style="font-size:200%;"> notanın trigonometrik formülü : A*cos(2*pi*f*t)<br/>
           - A : notanın genliği<br/>
           - f : notanın frekansı<br/>
           - t : notanın çalma zamanı (başlangıç , bitiş zamanı ve örnekleme frekansı ile bulunur)<br/>
@@ -40,18 +40,22 @@ Proje            : MATLAB ile sentezleme<br/>
 
      Parse edilmiş Müzik örneği                                                   <br/>
      1.Ölçülük parse verileri(Sentezleme için lazım olan sütunlar belirlenmiştir) 
+   </p>
     
      <img src="images/Parse.png"> </img>
      
 <h1>2. Hafta Hedefleri</h1>
-
--sentez.m scripti.<br/>
--Exponential ve ADSR zarfların kullanılması. <br/>
--Harmonik eklenmesi.<br/>
--MATLAB'ın reverberation fonksiyonunu kullanarak yankı eklenmesi.<br/>
--Program sonunda sinyal ve reverb eklenen olan sinyalin çizdirilmesi. <br/>
--Program sonunda reverb eklenen sinyalin çaldırılması. <br/>
--16. Ölçülükteki notaların harmonik eklenmeden eklenmiş ve reverb eklenmiş versiyonlarının grafikleri çıkartıp açıklamalara eklenmesi. <br/>
+<p style="font-size:200%;">
+<ul>
+<li>sentez.m scripti.</li>
+<li>Exponential ve ADSR zarfların kullanılması.</li>
+<li>Harmonik eklenmesi.</li>
+<li>MATLAB'ın reverberation fonksiyonunu kullanarak yankı eklenmesi.</li>
+<li>Program sonunda sinyal ve reverb eklenen olan sinyalin çizdirilmesi.</li>
+<li>Program sonunda reverb eklenen sinyalin çaldırılması.</li>
+<li>16. Ölçülükteki notaların harmonik eklenmeden eklenmiş ve reverb eklenmiş versiyonlarının grafikleri çıkartıp açıklamalara eklenmesi.</li>
+</ul>
+</p>
 
 <h1>CEVAPLAR</h1> <br/>
 
@@ -167,7 +171,15 @@ end
 
 <h3> Not : </h3>
 
-
+<p style="font-size:200%;">
+Proje boyunca sentezlenen müziğe ses efekti(yankı) olarak reverb eklenmiş.<br/> Reverb, ses dalgalarının birçok yüzeyden yansıtılmış şekli olarak tanımlanabilir.
+<br/> 
+**5.1.1** ve **5.1.2** şıklardaki grafikler sentezlenen müziğin reverb eklenmeden grafikleridir.<br/>
+**5.2.1** ve **5.2.2** şıklardaki grafikler sentezlenen müziğin reverb eklenmiş grafikleridir.**Doğrudan ses ve Yansıtılmış ses**<br/>
+Bu da müziğe sıcaklık ve derinlik katarak müziğin kapalı bir oditoryumda çalındığı izlenimini vermektedir.</br>
+Grafiklerdeki dalgaların birleştiği yani boşlukların kaybolduğu gözlemlenmektedir. Bu da sesin çaldığı ortamdaki <br/>
+boşlukların kapatıldığı göstermektedir.
+</p>
 
 <h2>6 Reverb eklenen sinyalin çaldılırma </h2>
 
@@ -197,5 +209,11 @@ end
 <br/>
 
 <h3> Not : </h3>
+<p style="font-size:200%;">
+Oluşturulan müziğin 16. ölçülüğünü alarak müzik üzerinde harmonikler ve reverb'in etkileri gözlemlenmiştir.<br/>
+**Bir sinyalin kalitesi , bilgi kaybının miktarıyla ters orantılıdır**. Yani bilgi kaydı ne kadar büyük olursa <br/>
+sinyalin kalitesi o kadar düşük olmaktadır.
+Dolayısıyla oluşturulan müziğin kalitesini iyileştirmek için harmonikleri eklenmiştir. Ve grafiklerde sinyal gerçek <br/>
+bir ses sinyaline yaklaştığı gözlemelenmektedir.<br/>
 
-
+</p>
