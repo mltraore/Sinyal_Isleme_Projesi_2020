@@ -11,17 +11,17 @@ Proje            : MATLAB ile sentezleme<br/>
 -Parse edilmiş datanın incelenmesi ve müziğin sentezleyebilmesi içi lazım olan sütunların tespit edilmesi.<br/>
 -Repoya .musicxml .mscz uzantılı müzik dosyaları ve .png uzantılı foto dosyasının eklenmesi.<br/>
   <h1>CEVAPLAR</h1> <br/> 
-<h2>1. Oluşturulan müziğin .png dosyası</h2> <br/>
+<h2>1. Oluşturulan müziğin .png dosyası</h2> 
 
   ![Nota](https://user-images.githubusercontent.com/53661737/70986265-a01f9e80-20ce-11ea-994b-b159533a36b8.png)
 
-  <br/>
+  
    Bu müzik 16 ölçülüklü olmak üzere 229 nota ve restten  oluşmaktadır. <br/>
-   1.Ölçülük (9 tane nota ve 2 tane restten oluşmaktadır)<br/>
+   1.Ölçülük (9 tane nota ve 2 tane restten oluşmaktadır)
 
   ![Olculuk](https://user-images.githubusercontent.com/53661737/70986316-b75e8c00-20ce-11ea-9196-bcb84935e892.png)
 
-  <br/>
+
 
 <h2>2. .musicxml uzantılı dosyanın parse edilmesi</h2> <br/>
 
@@ -44,12 +44,12 @@ Proje            : MATLAB ile sentezleme<br/>
                    bitiş zaman = başlangıç + süre <br/>
 
      Parse edilmiş Müzik örneği                                                   <br/>
-     1.Ölçülük parse verileri(Sentezleme için lazım olan sütunlar belirlenmiştir) <br/>
+     1.Ölçülük parse verileri(Sentezleme için lazım olan sütunlar belirlenmiştir) 
     
      
     ![Parse](https://user-images.githubusercontent.com/53661737/70986358-cb09f280-20ce-11ea-9c28-54f0bcba0008.png)
 
-     <br/>
+     
 <h1>2. Hafta Hedefleri</h1>
 
 -sentez.m scripti.<br/>
