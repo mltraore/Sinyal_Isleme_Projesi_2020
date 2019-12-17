@@ -23,7 +23,7 @@ Proje            : MATLAB ile sentezleme<br/>
 <h2>2. .musicxml uzantılı dosyanın parse edilmesi</h2> <br/>
 
      MusicXML Parser fonksiyonu kullanılarak oluşturulan müzik parse edilir.<br/>
-     mxml = parseMusicXML('/home/mohamedlassine/Bureau/Sinyal_Isleme_Projesi_2020/muzik/nota.musicxml');<br/>
+     mxml = parseMusicXML('nota.musicxml');<br/>
 
 <h2>3.   Müziği sentezleyebilmek için verinin lazım olan sütunları</h2> <br/>
  
@@ -44,6 +44,7 @@ Proje            : MATLAB ile sentezleme<br/>
      1.Ölçülük parse verileri(Sentezleme için lazım olan sütunlar belirlenmiştir) <br/>
     
      ![](images/parse.png)
+
      <br/>
 <h1>2. Hafta Hedefleri</h1>
 
@@ -166,19 +167,19 @@ end
 
 <h3> Harmonik eklenmemiş (ADSR)</h3>
 
-   ![](images/harmoniksiz.eps) 
+   ![](images/harmoniksiz.jpg) 
 
 <h3> Harmonik eklenmiş   (ADSR)</h3>
 
-   ![](images/harmonik_100.eps)
+   ![](images/harmonik_100.jpg)
 
 <h3> reverb eklenmiş (harmoniksiz)    (ADSR)</h3>
 
-   ![](images/reverbNoHarmonic)
+   ![](images/reverbNoHarmonic.jpg)
 
 <h3> reverb eklenmiş (harmonik=100)    (ADSR)</h3>
 
-   ![](images/reverbHarmonic_100.eps)
+   ![](images/reverbHarmonic_100.jpg)
 
 <br/>
 
