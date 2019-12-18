@@ -12,7 +12,7 @@ Proje            : MATLAB ile sentezleme<br/>
     Projenin amacı, MATLAB programı ortamında herhangi bir  .musicxml uzantılı müzik dosyasını alarak müziği sentezleyerek<br/>
     müziğe reverb eklemek ve reverb eklenen müziği çalmak için bir MATLAB kodunu geliştirmektir.<br/>
     Bu projede Müziği oluşturmak için Müzik notasyon programı olan <strong>MuseCore</strong> , müziği sentezlemek <br/>
-    için ise <strong>MATLAB programı</strong> teknolojilerini kullanılacaktır.
+    için ise <strong>MATLAB programı</strong> teknolojileri kullanılacaktır.
 </p>
 </p>
 <h1>1. Hafta Hedefleri</h1>
