@@ -8,11 +8,11 @@ Proje            : MATLAB ile sentezleme<br/>
 <h1>Proje Tanımı</h1>
 <p>
     Bu proje , İstanbul Sabahattin Zaim Üniversitesi Bilgisayar Mühendisliği bölümü Sinyal İşleme Dersinin<br/>
-    dönem sonu projesidir.
+    dönem sonu projesidir.<br/>
     Projenin amacı, MATLAB programı ortamında herhangi bir  .musicxml uzantılı müzik dosyasını sentezleyerek<br/>
-    müziğe reverb eklemek ve reverb eklenen müziği çalmak için bir MATLAB kodunu geliştirmektir.
-    Bu projede Müzik oluşturmak için Müzik notasyon programı olan <strong>MuseCore</strong> ve Müziği sentezlemek 
-    için ise <strong/>MATLAB programı<strong> teknolojileri kullanılacaktır.
+    müziğe reverb eklemek ve reverb eklenen müziği çalmak için bir MATLAB kodunu geliştirmektir.<br/>
+    Bu projede Müzik oluşturmak için Müzik notasyon programı olan <strong>MuseCore</strong> ve Müziği sentezlemek <br/>
+    için ise <strong>MATLAB programı</strong> teknolojileri kullanılacaktır.
 </p>
 </p>
 <h1>1. Hafta Hedefleri</h1>
