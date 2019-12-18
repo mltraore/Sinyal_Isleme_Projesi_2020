@@ -4,6 +4,16 @@
 Öğrenci   Numara : 030117024  <br/>
 Ders Adı         : Sinyal İşleme<br/>
 Proje            : MATLAB ile sentezleme<br/>
+
+<h1>Proje Tanımı</h1>
+<p>
+    Bu proje , İstanbul Sabahattin Zaim Üniversitesi Bilgisayar Mühendisliği bölümü Sinyal İşleme Dersinin<br/>
+    dönem sonu projesidir.
+    Projenin amacı, MATLAB programı ortamında herhangi bir  .musicxml uzantılı müzik dosyasını sentezleyerek<br/>
+    müziğe reverb eklemek ve reverb eklenen müziği çalmak için bir MATLAB kodunu geliştirmektir.
+    Bu projede Müzik oluşturmak için Müzik notasyon programı olan <strong>MuseCore</strong> ve Müziği sentezlemek 
+    için ise <strong/>MATLAB programı<strong> teknolojileri kullanılacaktır.
+</p>
 </p>
 <h1>1. Hafta Hedefleri</h1>
 <p style="font-size:300%;">
@@ -65,58 +75,57 @@ Proje            : MATLAB ile sentezleme<br/>
 
 <h1>CEVAPLAR</h1> <br/>
 
-<h2>1. sentez.m scripti</h2> <br/>
+<h2>1. sentez.m scripti</h2>
 
 ```matlab
-parse  = parseMusicXML('nota.musicxml');                                    %Müzik parse edilir
-zarf   = input('Zarf turunu seciniz : 1->exponential 2->ADSR : ');
-hmk    = input('Harmonik sayisini giriniz : ');
-fs     = 44100;                                                             %Örnekleme frekansı 44100 Hz
-signal = [];
-revSig = []; 
-time   = [];
-tt     = [];
+	parse  = parseMusicXML('nota.musicxml');                                    %Müzik parse edilir
+	zarf   = input('Zarf turunu seciniz : 1->exponential 2->ADSR : ');
+	hmk    = input('Harmonik sayisini giriniz : ');
+	fs     = 44100;                                                             %Örnekleme frekansı 44100 Hz
+	signal = [];
+	revSig = []; 
+	time   = [];
+	tt     = [];
 
 
-for i  = 1:length(parse)
- frek  = note(parse(i,4));                                                  %Pitch'ten frekans döndürülür
- start = parse(i,6);
- dur   = parse(i,7);
- tt    = start:1/fs:(start+dur-1/fs);
- nota  = zeros(size(tt));
- 
- for n = 1:hmk
-         nota = nota + (1/n)*cos(2*pi*n*frek*tt);                           %Harmonikler toplanır
- end
+	for i  = 1:length(parse)
+	 frek  = note(parse(i,4));                                                  %Pitch'ten frekans döndürülür
+	 start = parse(i,6);
+	 dur   = parse(i,7);
+	 tt    = start:1/fs:(start+dur-1/fs);
+	 nota  = zeros(size(tt));
+	 
+	 for n = 1:hmk
+		 nota = nota + (1/n)*cos(2*pi*n*frek*tt);                           %Harmonikler toplanır
+	 end
 
- if(zarf==1)
-     %Exponential
+	 if(zarf==1)
+	     %Exponential
 
-     ttt = 0:1/fs:dur-1/fs;
-     nota = nota.*exp(-ttt/parse(i,2));                                      %Exponential zarfı ilgili notaya uygulanır
+	     ttt = 0:1/fs:dur-1/fs;
+	     nota = nota.*exp(-ttt/parse(i,2));                                      %Exponential zarfı ilgili notaya uygulanır
 
- elseif(zarf==2) 
-     %ADSR
-     len  = length(nota);
-     env  = [linspace(0,1.5,ceil(len/5)) linspace(1.5,1,ceil(len/10)) ...   %ADSR zarfı oluşturulur
-            ones(1,ceil(len/2)) linspace(1,0,ceil(len/5))];                 
-     fark = length(env) - length(nota); 
-     env  = env(1,1:end-fark);
-     nota = nota.*env;                                                      %ADSR zarfı ilgili notaya uygulanır
-  end
-  signal  = horzcat(signal,nota);                                           %nota , sinyal dizisinin sonuna eklenir
-  time    = horzcat(time,tt);                                               %nota süresi , time dizisinin sonuna eklenir
-end
- 
- reverb   =  reverberator('PreDelay',0.5,'WetDryMix',1);                    %reverberator nesnesi oluşturulur 'reverb'
- revSig   =  reverb(signal');                                               %Sonuç sinyale reverb eklenir
- plot(time,signal)                                                          %reverb eklenmemiş sinyal çizilir
- legend('Signal')
- figure
- plot(time,revSig)                                                          %reverb eklenen sinyal çizilir
- legend('Signal','Reverb')
- soundsc(revSig,fs);                                                        %reverb eklenen sinyal çaldırılır
-
+	 elseif(zarf==2) 
+	     %ADSR
+	     len  = length(nota);
+	     env  = [linspace(0,1.5,ceil(len/5)) linspace(1.5,1,ceil(len/10)) ...   %ADSR zarfı oluşturulur
+		    ones(1,ceil(len/2)) linspace(1,0,ceil(len/5))];
+	     fark = length(env) - length(nota); 
+	     env  = env(1,1:end-fark);
+	     nota = nota.*env;                                                      %ADSR zarfı ilgili notaya uygulanır
+	  end
+	  signal  = horzcat(signal,nota);                                           %nota , sinyal dizisinin sonuna eklenir
+	  time    = horzcat(time,tt);                                               %nota süresi , time dizisinin sonuna eklenir
+	end
+	 
+	 reverb   =  reverberator('PreDelay',0.5,'WetDryMix',1);                    %reverberator nesnesi oluşturulur 'reverb'
+	 revSig   =  reverb(signal');                                               %Sonuç sinyale reverb eklenir
+	 plot(time,signal)                                                          %reverb eklenmemiş sinyal çizilir
+	 legend('Signal')
+	 figure
+	 plot(time,revSig)                                                          %reverb eklenen sinyal çizilir
+	 legend('Signal','Reverb')
+	 soundsc(revSig,fs);                                                        %reverb eklenen sinyal çaldırılır
 ```
 
 <h2>2.1 Notaya exponential zarfının uygulanması</h2>
@@ -179,9 +188,8 @@ end
 Proje boyunca sentezlenen müziğe ses efekti(yankı) olarak reverb eklenmiş.<br/> Reverb, ses dalgalarının birçok yüzeyden yansıtılmış şekli olarak tanımlanabilir.
 <br/> 
 <strong>5.1.1</strong> ve <strong>5.1.2</strong> şıklardaki grafikler sentezlenen müziğin reverb eklenmeden grafikleridir.<br/>
-<strong>5.2.1</strong> ve <strong>5.2.2</strong> şıklardaki grafikler sentezlenen müziğin reverb eklenmiş grafikleridir.<br/>
-<strong>Doğrudan ses ve Yansıtılmış ses</strong>.<br/>
-Bu da müziğe sıcaklık ve derinlik katarak müziğin kapalı bir oditoryumda çalındığı izlenimini vermektedir.</br>
+<strong>5.2.1</strong> ve <strong>5.2.2</strong> şıklardaki grafikler sentezlenen müziğin reverb eklenmiş grafikleridir.<strong>Doğrudan ses ve Yansıtılmış ses</strong>.<br/>
+Bu da müziğe sıcaklık ve derinlik katarak müziğin kapalı bir oditoryumda çalındığı izlenimini vermektedir.<br/>
 Grafiklerdeki dalgaların birleştiği yani boşlukların kaybolduğu gözlemlenmektedir. Bu da sesin çaldığı ortamdaki <br/>
 boşlukların kapatıldığı göstermektedir.
 </p>
