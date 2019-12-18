@@ -1,5 +1,5 @@
 
-parse  = parseMusicXML('nota.musicxml');                                    %Müzik parse edilir
+parse  = parseMusicXML('muzik/nota.musicxml');                                    %Müzik parse edilir
 zarf   = input('Zarf turunu seciniz : 1->ADSR  2->exponential  : ');    
 hmk    = input('Harmonik sayisini giriniz : ');
 fs     = 44100;                                                             %Örnekleme frekansı 44100 Hz
@@ -9,7 +9,7 @@ time   = [];
 tt     = [];
 
 
-for i  = 223:229 %length(parse)
+for i  = 1:length(parse)
  frek  = note(parse(i,4));                                                  %Pitch'ten frekans döndürülür
  start = parse(i,6);
  dur   = parse(i,7);
@@ -47,7 +47,7 @@ for i  = 223:229 %length(parse)
  plot(time,revSig)                                                          %reverb eklenen sinyal çizilir
  legend('Signal','Reverb')
  title('Reverb eklenmiş Sinyal');
- %soundsc(revSig,fs);                                                        %reverb eklenen sinyal çalınır
+ soundsc(revSig,fs);                                                        %reverb eklenen sinyal çalınır
  
  
  
