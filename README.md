@@ -1,34 +1,34 @@
- <h1>Kişisel Bilgileri</h1> <br/>
-<p style="font-size:250%;">
+ <h1>Kişisel Bilgileri</h1>
+<p style="font-size:300%;">
 Öğrenci Ad-Soyad : Mohamed TRAORE<br/>
 Öğrenci   Numara : 030117024  <br/>
 Ders Adı         : Sinyal İşleme<br/>
 Proje            : MATLAB ile sentezleme<br/>
 </p>
-<h1>1. Hafta Hedefleri</h1> <br/>
-<p style="font-size:250%;">-Müzik notasyon programı olan MuseCore ortamında oluşturulan müziğin MATLAB ortamında parse edilmesi.<br/>
+<h1>1. Hafta Hedefleri</h1>
+<p style="font-size:300%;">
 <ul>
-<li>Müziği sentezlemek üzere note.m ve sentez.m MATLAB dosyalarının oluşturulması. </li>
-<li>Parse edilmiş datanın incelenmesi ve müziğin sentezleyebilmesi içi lazım olan sütunların tespit edilmesi.</li>
-<li>Repoya .musicxml .mscz uzantılı müzik dosyaları ve .png uzantılı foto dosyasının eklenmesi.</li>
+ <li>Müzik notasyon programı olan MuseCore ortamında oluşturulan müziğin MATLAB ortamında parse edilmesi.</li>
+ <li>Müziği sentezlemek üzere note.m ve sentez.m MATLAB dosyalarının oluşturulması. </li>
+ <li>Parse edilmiş datanın incelenmesi ve müziğin sentezleyebilmesi içi lazım olan sütunların tespit edilmesi.</li>
+ <li>Repoya .musicxml .mscz uzantılı müzik dosyaları ve .png uzantılı foto dosyasının eklenmesi.</li>
 </ul>
 </p>
-  <h1>CEVAPLAR</h1> <br/> 
+  <h1>CEVAPLAR</h1> 
 <h2>1. Oluşturulan müziğin .png dosyası</h2> 
-
 <img src="images/Nota.png"> </img> 
-  <p style="font-size:250%;"> Bu müzik 16 ölçülüklü olmak üzere 229 nota ve restten  oluşmaktadır. <br/>
+  <p style="font-size:300%;"> Bu müzik 16 ölçülüklü olmak üzere 229 nota ve restten  oluşmaktadır. <br/>
    1.Ölçülük (9 tane nota ve 2 tane restten oluşmaktadır) </p>
 <img src="images/Olculuk.png"> </img>
 
 <h2>2. .musicxml uzantılı dosyanın parse edilmesi</h2> <br/>
 
-    <p style="font-size:250%;"> MusicXML Parser fonksiyonu kullanılarak oluşturulan müzik parse edilir.<br/>
+    <p style="font-size:300%;"> MusicXML Parser fonksiyonu kullanılarak oluşturulan müzik parse edilir.<br/>
      mxml = parseMusicXML('nota.musicxml');</p><br/> 
 
 <h2>3.   Müziği sentezleyebilmek için verinin lazım olan sütunları</h2> <br/>
  
-    <p style="font-size:250%;"> notanın trigonometrik formülü : A*cos(2*pi*f*t)<br/>
+    <p style="font-size:300%;"> notanın trigonometrik formülü : A*cos(2*pi*f*t)<br/>
           <ul>
            <li>A : notanın genliği</li>
            <li>f : notanın frekansı</li>
@@ -51,7 +51,7 @@ Proje            : MATLAB ile sentezleme<br/>
      <img src="images/Parse.png"> </img>
      
 <h1>2. Hafta Hedefleri</h1>
-<p style="font-size:250%;">
+<p style="font-size:300%;">
 <ul>
 <li>sentez.m scripti.</li>
 <li>Exponential ve ADSR zarfların kullanılması.</li>
@@ -67,9 +67,7 @@ Proje            : MATLAB ile sentezleme<br/>
 
 <h2>1. sentez.m scripti</h2> <br/>
 
-<pre>
-
-
+```matlab
 parse  = parseMusicXML('nota.musicxml');                                    %Müzik parse edilir
 zarf   = input('Zarf turunu seciniz : 1->exponential 2->ADSR : ');
 hmk    = input('Harmonik sayisini giriniz : ');
@@ -119,19 +117,19 @@ end
  legend('Signal','Reverb')
  soundsc(revSig,fs);                                                        %reverb eklenen sinyal çaldırılır
 
-</pre>
+```
 
 <h2>2.1 Notaya exponential zarfının uygulanması</h2>
 
-<pre>
+```matlab
      ttt = 0:1/fs:dur-1/fs;
      nota = nota.*exp(-tt/parse(i,2));                                       %Exponential zarfı ilgili notaya uygulanır
-</pre>
+```
 
 
 <h2>2.2 Notaya ADSR zarfının uygulanması  </h2>
 
-<pre>
+```matlab
     %ADSR
      len  = length(nota);
      env  = [linspace(0,1.5,ceil(len/5)) linspace(1.5,1,ceil(len/10)) ...   %ADSR zarfı oluşturulur
@@ -139,22 +137,22 @@ end
      fark = length(env) - length(nota); 
      env  = env(1,1:end-fark);
      nota = nota.*env;                                                      %ADSR zarfı ilgili notaya uygulanır
-</pre>
+```
 
 <h2>3 Harmonik eklenmesi </h2>
 
-<pre>
+```matlab
      for n = 1:hmk
          nota = nota + (1/n)*cos(2*pi*n*frek*tt);                           %Harmonikler toplanır
      end
-</pre>
+```
 
 <h2>4 MATLAB'ın reverberation fonksiyonunu kullanarak yankı eklenmesi. </h2>
 
-<pre>
+```matlab
      reverb   =  reverberator('PreDelay',0.5,'WetDryMix',1);                    %reverberator nesnesi oluşturulur 'reverb'
      revSig   =  reverb(signal');                                               %Sonuç sinyale reverb eklenir
-</pre>
+```
 
 <h2>5.1.1 Reverb eklenmemiş Sinyal grafiği (ADSR)</h2>
 
@@ -177,7 +175,7 @@ end
 
 <h3> Not : </h3>
 
-<p style="font-size:250%;">
+<p style="font-size:300%;">
 Proje boyunca sentezlenen müziğe ses efekti(yankı) olarak reverb eklenmiş.<br/> Reverb, ses dalgalarının birçok yüzeyden yansıtılmış şekli olarak tanımlanabilir.
 <br/> 
 <strong>5.1.1</strong> ve <strong>5.1.2</strong> şıklardaki grafikler sentezlenen müziğin reverb eklenmeden grafikleridir.<br/>
@@ -216,7 +214,7 @@ boşlukların kapatıldığı göstermektedir.
 <br/>
 
 <h3> Not : </h3>
-<p style="font-size:250%;">
+<p style="font-size:300%;">
 Oluşturulan müziğin 16. ölçülüğünü alarak müzik üzerinde harmonikler ve reverb'in etkileri gözlemlenmiştir.<br/>
 <strong>Bir sinyalin kalitesi , bilgi kaybının miktarıyla ters orantılıdır</strong>. Yani bilgi kaydı ne kadar büyük olursa <br/>
 sinyalin kalitesi o kadar düşük olmaktadır.<br/>
