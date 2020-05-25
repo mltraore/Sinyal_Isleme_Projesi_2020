@@ -1,4 +1,4 @@
- <h1>Kişisel Bilgileri</h1>
+<h1>Kişisel Bilgileri</h1>
 <p style="font-size:300%;">
 Öğrenci Ad-Soyad : Mohamed TRAORE<br/>
 Öğrenci   Numara : 030117024  <br/>
