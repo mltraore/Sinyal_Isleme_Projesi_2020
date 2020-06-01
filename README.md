@@ -39,12 +39,12 @@ Proje            : MATLAB ile sentezleme<br/>
 <h2>3.   Müziği sentezleyebilmek için verinin lazım olan sütunları</h2> <br/>
  
    <p style="font-size:300%;"> notanın trigonometrik formülü : A*cos(2*pi*f*t)<br/>
-          <ul>
-           <li>A : notanın genliği</li>
-           <li>f : notanın frekansı</li>
-           <li>t : notanın çalma zamanı (başlangıç , bitiş zamanı ve örnekleme frekansı ile bulunur)</li>
-          </ul>
-     dolayısıyla lazım olan sütunlar bunlardır : <br/>
+<ul>
+ <li>A : notanın genliği</li>
+ <li>f : notanın frekansı</li>
+ <li>t : notanın çalma zamanı (başlangıç , bitiş zamanı ve örnekleme frekansı ile bulunur)</li>
+</ul>
+ndolayısıyla lazım olan sütunlar bunlardır : <br/>
           <ul>
            <li> <h4>4.Sütun:</h4> her bir notanın middi pitch değerini vermektedir ve bu değeri frekansa çevirilerek notanun freakansı bulunur.</li>
                    
