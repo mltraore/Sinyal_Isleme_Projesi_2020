@@ -51,8 +51,8 @@ Proje            : MATLAB ile sentezleme<br/>
    <pre> formül   frekans = 440*2^((pitch - 69)/12)  Hz </pre> 
           </ul>
           <ul>
-           <li><h4>5.Sütun:</h4> Saniye cinsinden her notanın başlangıç zamanını vermektedir.</li>
-           <li><h4>6.Sütun:</h4> Saniye cinsinden her natanın ne kadar zaman sürdüğünü vermektedir. Bu değeri kullanarak bitiş zamanı bulunur.</li>
+          <li><h4>5.Sütun:</h4> Saniye cinsinden her notanın başlangıç zamanını vermektedir.</li>
+          <li><h4>6.Sütun:</h4> Saniye cinsinden her natanın ne kadar zaman sürdüğünü vermektedir. Bu değeri kullanarak bitiş zamanı bulunur.</li>
                   <pre>  bitiş zaman = başlangıç + süre </pre>
           </ul>
      Parse edilmiş Müzik örneği                                                   <br/>
