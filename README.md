@@ -31,14 +31,14 @@ Proje            : MATLAB ile sentezleme<br/>
    1.Ölçülük (9 tane nota ve 2 tane restten oluşmaktadır) </p>
 <img src="images/Olculuk.png"> </img>
 
-<h2>2. .musicxml uzantılı dosyanın parse edilmesi</h2> <br/>
+<h2>2. .musicxml uzantılı dosyanın parse edilmesi</h2> <br>
 
-    <p style="font-size:300%;"> MusicXML Parser fonksiyonu kullanılarak oluşturulan müzik parse edilir.<br/>
+   <p style="font-size:300%;"> MusicXML Parser fonksiyonu kullanılarak oluşturulan müzik parse edilir.<br/>
      mxml = parseMusicXML('nota.musicxml');</p><br/> 
 
 <h2>3.   Müziği sentezleyebilmek için verinin lazım olan sütunları</h2> <br/>
  
-    <p style="font-size:300%;"> notanın trigonometrik formülü : A*cos(2*pi*f*t)<br/>
+   <p style="font-size:300%;"> notanın trigonometrik formülü : A*cos(2*pi*f*t)<br/>
           <ul>
            <li>A : notanın genliği</li>
            <li>f : notanın frekansı</li>
@@ -48,7 +48,7 @@ Proje            : MATLAB ile sentezleme<br/>
           <ul>
            <li> <h4>4.Sütun:</h4> her bir notanın middi pitch değerini vermektedir ve bu değeri frekansa çevirilerek notanun freakansı bulunur.</li>
                    
-                  <pre> formül   frekans = 440*2^((pitch - 69)/12)  Hz </pre> 
+   <pre> formül   frekans = 440*2^((pitch - 69)/12)  Hz </pre> 
           </ul>
           <ul>
            <li><h4>5.Sütun:</h4> Saniye cinsinden her notanın başlangıç zamanını vermektedir.</li>
@@ -59,7 +59,7 @@ Proje            : MATLAB ile sentezleme<br/>
      1.Ölçülük parse verileri(Sentezleme için lazım olan sütunlar belirlenmiştir) 
    </p>
     
-     <img src="images/Parse.png"> </img>
+   <img src="images/Parse.png"> </img>
      
 <h1>2. Hafta Hedefleri</h1>
 <p style="font-size:300%;">
